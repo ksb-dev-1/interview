@@ -24,7 +24,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.container {
+.countdown-timer {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,73 +32,77 @@ input[type="number"] {
   justify-content: center;
 }
 
-.inner-container {
+.countdown-timer__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: var(--br);
   padding: 2rem;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #c3c3c3;
 }
 
-.container h1 {
+.countdown-timer__title {
   font-weight: 700;
   color: #555;
 }
 
-.inputs-container {
+.countdown-timer__inputs {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.inputs-container div {
+.countdown-timer__labels,
+.countdown-timer__fields {
   width: 100%;
   display: flex;
   align-items: center;
   text-align: center;
 }
 
-.inner-container div p {
+.countdown-timer__label {
   width: 75px;
   margin-bottom: 1rem;
 }
 
-.inputs-container div input {
-  height: 75px;
-  width: 75px;
-  display: flex;
-  flex-direction: column;
-  /* padding: 0.75rem 0rem; */
-  font-size: 1.25rem;
-  border: none;
-  text-align: center;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  border-radius: 100%;
-}
-
-.inputs-container div input:focus {
-  outline: transparent;
-}
-
-.inputs-container div input:focus::placeholder {
+.countdown-timer__separator--transparent {
   color: transparent;
 }
 
-.inputs-container span {
+.countdown-timer__separator {
   font-size: 1.5rem;
   margin: 0 1rem;
 }
 
-.buttons {
+.countdown-timer__input {
+  height: 75px;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  border: none;
+  text-align: center;
+  border-radius: 100%;
+  border: 1px solid #c3c3c3;
+}
+
+.countdown-timer__input:focus {
+  outline: transparent;
+}
+
+.countdown-timer__input:focus::placeholder {
+  color: transparent;
+}
+
+.countdown-timer__buttons {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.btn {
+.countdown-timer__button {
   min-width: 50%;
   padding: 0.75rem 0rem;
   border-radius: var(--br);
@@ -111,24 +115,65 @@ input[type="number"] {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#start {
+.start {
   background: green;
   margin-right: 0.25rem;
 }
 
-#start:hover {
+.start:hover {
   background: rgb(0, 157, 0);
 }
 
-#reset {
+.stop {
+  display: none;
+  background: orange;
+  margin-right: 0.25rem;
+}
+
+.stop:hover {
+  background: rgb(255, 178, 34);
+}
+
+.reset {
   background: tomato;
   margin-left: 0.25rem;
 }
 
-#reset:hover {
+.reset:hover {
   background: rgb(255, 124, 101);
 }
 
 .transparent {
   color: transparent;
+}
+
+.error-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100vh);
+  transition: transform 0.3s ease;
+}
+
+.error-msg {
+  background: rgb(255, 215, 208);
+  border: 1px solid tomato;
+  padding: 0.5rem 1rem;
+  border-radius: var(--br);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.showError {
+  transform: translateY(80vh);
 }
