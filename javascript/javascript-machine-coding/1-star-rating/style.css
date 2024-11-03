@@ -1,0 +1,78 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.rating-container {
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#emoji {
+  position: absolute;
+  font-size: 2rem;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+
+#text {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.stars i {
+  color: #e6e6e6;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.stars i:last-child {
+  margin-right: 0;
+}
+
+.stars i.active {
+  color: gold;
+}
+
+.stars i.hover {
+  color: goldenrod;
+}
+
+#btn {
+  background: tomato;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+  letter-spacing: 5px;
+  transition: letter-spacing 0.3s ease-in-out;
+}
+
+#btn:hover {
+  letter-spacing: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}

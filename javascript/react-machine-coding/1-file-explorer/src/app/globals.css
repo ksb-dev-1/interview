@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.file-explorer {
+  width: 300px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.folder {
+  margin-left: 20px;
+}
+
+.folder-header {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.file {
+  margin-left: 20px;
+  cursor: pointer;
+}

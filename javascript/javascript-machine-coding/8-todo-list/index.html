@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="task-input" placeholder="Add a new task..." />
+        <button id="add-task-btn">Add Task</button>
+
+        <div class="filter">
+            <button class="filter-btn" onclick="filterTasks('all')">All</button>
+            <button class="filter-btn" onclick="filterTasks('completed')">Completed</button>
+            <button class="filter-btn" onclick="filterTasks('active')">Active</button>
+        </div>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <!-- Custom Modal for Delete Confirmation -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('delete-modal')">&times;</span>
+            <p id="delete-message">Are you sure you want to delete this task?</p>
+            <button id="confirm-delete">Yes, delete</button>
+        </div>
+    </div>
+
+    <!-- Custom Modal for Editing Task -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('edit-modal')">&times;</span>
+            <p>Edit Task</p>
+            <input type="text" id="edit-task-input" />
+            <button id="confirm-edit">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

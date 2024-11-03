@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination in Javascript</title>
+    <style>
+        .pagination-buttons {
+            margin-top: 20px;
+        }
+    
+        .pagination-buttons button,
+        .pagination-buttons input {
+            margin-right: 5px;
+            padding: 5px 10px;
+        }
+    
+        .pagination-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    
+        .pagination-buttons button[disabled] {
+            background-color: grey;
+        }
+    
+        .pagination-buttons input {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="data-container"></div>
+    <div class="pagination-buttons">
+        <button id="prev-btn" onclick="prevPage()">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-btn" onclick="nextPage()">Next</button>
+    
+        <!-- Jump to Page -->
+        <label for="jump-to-page">Jump to Page:</label>
+        <input type="number" id="jump-to-page" min="1" max="100" placeholder="1">
+        <button onclick="jumpToPage()">Go</button>
+    </div>
+    <script src="pagination.js"></script>
+</body>
+</html>
